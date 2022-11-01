@@ -7,7 +7,9 @@
         <h1>Second Page</h1>
         <div class="form">
             <label for="phnumber">Phone Number</label>
-            <input type="text" id="phnumber" name="phnumber" placeholder="Your Phone Number">
+            <input type="tel" id="phnumber" name="phnumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="" placeholder="Your Phone Number">
+            <small>Format: 123-456-7890</small>
+      <input type="button" value="Submit" onclick="pushPhoneNum()">
         </div>
         
     </body>
