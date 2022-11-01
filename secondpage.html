@@ -2,12 +2,24 @@
 <html>
     <head>
         <title>Javier Second Page</title>
+        <script>
+             function pushPhoneNum(){
+                const phoneNum = document.getElementById("phone").value;
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                'event':'Signup',
+                    'phone':phoneNum
+                    });
+                window.alert("Entered phone number is "+phoneNum);
+            }
+        </script>
+        <script charset="utf-8" src="https://analytics.tiktok.com/i18n/pixel/identify.js"></script>
     </head>
     <body>
         <h1>Second Page</h1>
         <div class="form">
-            <label for="phnumber">Phone Number</label>
-            <input type="tel" id="phnumber" name="phnumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="" placeholder="Your Phone Number">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phnumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="" placeholder="Your Phone Number">
             <small>Format: 123-456-7890</small>
       <input type="button" value="Submit" onclick="pushPhoneNum()">
         </div>
